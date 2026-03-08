@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About" description="About Yasar Polatli — resume and background">
+  <section class="space-y-8">
+    <h1 class="font-display text-3xl font-bold">About</h1>
+
+    <div class="space-y-4 text-[var(--color-text-secondary)] leading-relaxed">
+      <p>
+        I'm a software engineer with a passion for building clean, maintainable systems.
+        When I'm not coding, you can find me playing guitar.
+      </p>
+    </div>
+
+    <div class="space-y-6">
+      <h2 class="font-display text-xl font-semibold">Experience</h2>
+      <div class="space-y-4">
+        <div class="border-l-2 border-[var(--color-eng)] pl-4">
+          <h3 class="font-medium">Software Engineer</h3>
+          <p class="text-sm text-[var(--color-text-secondary)]">Qlik &middot; 2022 &ndash; Present</p>
+          <p class="mt-1 text-sm text-[var(--color-text-secondary)]">Backend focused full-stack, cloud-native, software engineering.</p>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div class="border-l-2 border-[var(--color-eng)] pl-4">
+          <h3 class="font-medium">Software Engineer</h3>
+          <p class="text-sm text-[var(--color-text-secondary)]">Bimar IT Services &middot; 2021 &ndash; 2022</p>
+          <p class="mt-1 text-sm text-[var(--color-text-secondary)]">Full-stack, cloud-native, software engineering.</p>
+        </div>
+      </div>
+    </div>
+    <div class="space-y-6">
+      <h2 class="font-display text-xl font-semibold">Education</h2>
+      <div class="space-y-4">
+        <div class="border-l-2 border-[var(--color-eng)] pl-4">
+          <h3 class="font-medium">Computer Engineering, BEng</h3>
+          <p class="text-sm text-[var(--color-text-secondary)]">Izmir Institute of Technology &middot; 2017 &ndash; 2022</p>
+          <p class="mt-1 text-sm text-[var(--color-text-secondary)]">Grade: 3,1/4. Graduated as honor student.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-6">
+      <h2 class="font-display text-xl font-semibold">Skills</h2>
+      <div class="flex flex-wrap gap-2">
+        {['GoLang', 'Node.js', 'TypeScript', 'System Design', 'Cloud', 'Guitar'].map(skill => (
+          <span class="px-3 py-1 text-sm rounded-full bg-[var(--color-bg-secondary)] text-[var(--color-text-secondary)] border border-[var(--color-border)]">
+            {skill}
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  date: string;
+}
+
+const { title, description, href, date } = Astro.props;
+---
+
+<a href={href} class="block group hover:no-underline">
+  <article class="py-4 border-b border-[var(--color-border)]">
+    <div class="flex items-baseline justify-between gap-4">
+      <h3 class="font-medium text-[var(--color-text)] group-hover:text-[var(--color-link)] transition-colors">
+        {title}
+      </h3>
+      <time class="text-xs text-[var(--color-text-secondary)] shrink-0">{date}</time>
+    </div>
+    <p class="mt-1 text-sm text-[var(--color-text-secondary)]">{description}</p>
+  </article>
+</a>

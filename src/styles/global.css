@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fonts - change these to swap fonts site-wide */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
+
+  /* Colors */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+
+  /* Accent (teal) */
+  --color-eng: #0d9488;
+  --color-eng-light: #5eead4;
+}
+
+/* Light mode (default) */
+:root {
+  --color-bg: var(--color-slate-50);
+  --color-bg-secondary: var(--color-slate-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-border: var(--color-slate-200);
+  --color-link: var(--color-eng);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: var(--color-slate-950);
+    --color-bg-secondary: var(--color-slate-900);
+    --color-text: var(--color-slate-100);
+    --color-text-secondary: var(--color-slate-400);
+    --color-border: var(--color-slate-800);
+    --color-link: var(--color-eng-light);
+  }
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
